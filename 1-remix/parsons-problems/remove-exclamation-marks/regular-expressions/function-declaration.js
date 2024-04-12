@@ -1,11 +1,14 @@
 /* https://www.codewars.com/kata/reviews/57f74e99c2128af9130000d8/groups/57f94b0a2faf02e74c000557 */
 
-/* this exercise has 3 distractors */
+/* this exercise has 3 distractions */
 
-function removeExclamationMarks(s) {
-  return s.replace(/!/gi, '');
+export function removeExclamationMarks(s) {
+    return s.replace(/!/gi, '');
 }
 
-var function removeExclamationMarks(s) { // distractor
-s.replace(/!/gi, ''); // distractor
-function removeExclamationMarks(s) => { // distractor
+/*
+var function removeExclamationMarks(s) { // distraction
+s.replace(/!/gi, ''); // distraction
+function removeExclamationMarks(s) => { // distraction
+
+*/

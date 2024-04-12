@@ -14,19 +14,21 @@
 
 */
 
-const repeatString = (text = '', repetitions = 1) => {
-  const finalLength = text.length * repetitions;
-  let repeatedText = '';
-  while (true) {
-    if (repeatedText.length === finalLength) {
-      break;
+export const repeatString = (text = '', repetitions = 1) => {
+    const finalLength = text.length * repetitions;
+    let repeatedText = '';
+    while (true) {
+        if (repeatedText.length === finalLength) {
+            break;
+        }
+        repeatedText = repeatedText + text;
     }
-    repeatedText = repeatedText + text;
-  }
-  return repeatedText;
+    return repeatedText;
 };
 
-continue; // distractor
-if (repeatedText.length = finalLength) { // distractor
-while (false) { // distractor
-} // distractor
+/*
+continue; // distraction
+if (repeatedText.length = finalLength) { // distraction
+while (false) { // distraction
+} // distraction
+*/
