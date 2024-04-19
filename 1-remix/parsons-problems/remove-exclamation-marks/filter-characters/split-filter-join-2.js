@@ -14,4 +14,11 @@ let removeExclamationMarks = (s) =>
 
 */
 
+/**
+ * Removes exclamation marks from a given string.
+ *
+ * @param {string} s - The input string from which exclamation marks will be removed.
+ * @returns {string} The input string without exclamation marks.
+ */
+
 export let removeExclamationMarks = (s) => s.replace(/!/g, '');

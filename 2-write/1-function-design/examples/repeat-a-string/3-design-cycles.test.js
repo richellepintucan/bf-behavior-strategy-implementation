@@ -37,7 +37,7 @@
 */
 
 /* failed all the tests - always returned undefined
-  repeated is declared and returnd, but never modified
+  repeated is declared and returned, but never modified
 */
 const forLoopTry1 = (text = '', repetitions = 1) => {
     let repeated;
@@ -48,7 +48,7 @@ const forLoopTry1 = (text = '', repetitions = 1) => {
 };
 
 /* failed all the tests
-  repeated was initialized as undefined, so adding the text makes `undefinedtextext...`
+  repeated was initialized as undefined, so adding the text makes `undefinedtext...`
 */
 const forLoopTry2 = (text = '', repetitions = 1) => {
     // debugger;

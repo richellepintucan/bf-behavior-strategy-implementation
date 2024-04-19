@@ -29,8 +29,8 @@
 
 for (const solution of [secretSolution]) {
     // =============== test cases for this challenge ===============
-
-    describe(solution.name + ': repeating a string:', () => {
+/*
+describe(solution.name + ': repeating a string:', () => {
         describe('default parameters', () => {
             it('repeat once if no repetitions is passed', () => {
                 expect(solution('asdf')).toEqual('asdf');
@@ -77,6 +77,53 @@ for (const solution of [secretSolution]) {
         });
     });
 }
+
+*/
+
+    describe('repeating a string:', () => {
+        describe('default parameters', () => {
+            it('should repeat once if no repetitions are passed', () => {
+                expect(solution('asdf')).toEqual('asdf');
+            });
+            it('should return an empty string if no arguments are passed', () => {
+                expect(solution()).toEqual('');
+            });
+        });
+        
+        describe('an empty string', () => {
+            it('should return an empty string when repeated 0 times', () => {
+                expect(solution('', 0)).toEqual('');
+            });
+            it('should return an empty string when repeated 10 times', () => {
+                expect(solution('', 10)).toEqual('');
+            });
+            it('should return an empty string when repeated 100 times', () => {
+                expect(solution('', 100)).toEqual('');
+            });
+        });
+        
+        describe('zero repetitions', () => {
+            it('should return an empty string when "asdf" is repeated 0 times', () => {
+                expect(solution('asdf', 0)).toEqual('');
+            });
+            it('should return an empty string when "tommywalk" is repeated 0 times', () => {
+                expect(solution('tommywalk', 0)).toEqual('');
+            });
+        });
+        
+        describe('standard use cases', () => {
+            it('should repeat a longer phrase 3 times', () => {
+                expect(solution('go to school', 3)).toEqual('go to schoolgo to schoolgo to school');
+            });
+            it('should repeat a phrase with punctuation 2 times', () => {
+                expect(solution('"Go!", said Dr. Seuss?', 2)).toEqual('"Go!", said Dr. Seuss?"Go!", said Dr. Seuss?');
+            });
+            it('should repeat a string with special characters 2 times', () => {
+                expect(solution('\\ \n \t s', 2)).toEqual('\\ \n \t s\\ \n \t s');
+            });
+        });
+    });
+    
 
 // =============== a minified solution you can use to test your test cases ===============
 
