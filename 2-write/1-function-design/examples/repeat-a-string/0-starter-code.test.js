@@ -29,13 +29,65 @@
 
 for (const solution of [secretSolution]) {
     // =============== test cases for this challenge ===============
-
+/*
     describe(solution.name + ': _', () => {
         describe('_', () => {
             it('_', () => {});
         });
     });
 }
+*/
+
+    function repeatString(text = '', repetitions = 1) {
+        if (typeof text !== 'string' || typeof repetitions !== 'number' || repetitions <= 0 || !Number.isInteger(repetitions)) {
+            throw new Error('Invalid input');
+        }
+        
+        return text.repeat(repetitions);
+    }
+    
+    describe('repeatString', () => {
+        it('should repeat a string once by default', () => {
+            expect(repeatString('hello')).toEqual('hello');
+        });
+    
+        it('should repeat a string a specific number of times', () => {
+            expect(repeatString('hello', 3)).toEqual('hellohellohello');
+        });
+    
+        it('should handle empty string', () => {
+            expect(repeatString('')).toEqual('');
+        });
+    
+        it('should handle zero repetitions', () => {
+            expect(repeatString('hello', 0)).toEqual('');
+        });
+    
+        it('should throw an error for non-integer repetitions', () => {
+            expect(() => {
+                repeatString('hello', 1.5);
+            }).toThrowError('Invalid input');
+        });
+    
+        it('should throw an error for negative repetitions', () => {
+            expect(() => {
+                repeatString('hello', -2);
+            }).toThrowError('Invalid input');
+        });
+    
+        it('should throw an error for non-string text input', () => {
+            expect(() => {
+                repeatString(123, 2);
+            }).toThrowError('Invalid input');
+        });
+    
+        it('should throw an error for non-numeric repetitions input', () => {
+            expect(() => {
+                repeatString('hello', '2');
+            }).toThrowError('Invalid input');
+        });
+    });
+    
 
 // =============== a minified solution you can use to test your test cases ===============
 

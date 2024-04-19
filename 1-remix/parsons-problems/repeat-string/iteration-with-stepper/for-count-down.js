@@ -15,6 +15,14 @@
 
 */
 
+/**
+ * Repeats a given string a specified number of times.
+ *
+ * @param {string} [text=''] - The string to repeat. Default is an empty string.
+ * @param {number} [repetitions=1] - The number of times to repeat the string. Default is 1.
+ * @returns {string} The repeated string.
+ */
+
 export const repeatString = (text = '', repetitions = 1) => {
     let repeatedText = '';
     for (let count = repetitions; count > 0; count--) {

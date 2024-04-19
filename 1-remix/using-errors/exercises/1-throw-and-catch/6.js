@@ -2,6 +2,7 @@
 
 'use strict';
 
+/*
 console.log('- broken JS -');
 try {
     const userAge = 12;
@@ -21,3 +22,23 @@ try {
     console.assert(err.name === 'TypeError', 'name fail');
     console.assert(err.message === 'userAge is not iterable', 'message fail');
 }
+*/
+
+console.log('- broken JS -');
+try {
+    const userAge = 12;
+    throw new TypeError("userAge is not iterable");
+} catch (err) {
+    console.error(err);
+}
+
+console.log('- throw new error -');
+try {
+    throw new TypeError("userAge is not iterable");
+} catch (err) {
+    console.error(err);
+
+    console.assert(err.name === 'TypeError', 'name fail');
+    console.assert(err.message === 'userAge is not iterable', 'message fail');
+}
+

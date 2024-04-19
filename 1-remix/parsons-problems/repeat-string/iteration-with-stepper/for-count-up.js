@@ -15,7 +15,15 @@
 
 */
 
-const repeatString = (text = '', repetitions = 1) => {
+/**
+ * Repeats a given string a specified number of times.
+ *
+ * @param {string} [text=''] - The string to repeat. Default is an empty string.
+ * @param {number} [repetitions=1] - The number of times to repeat the string. Default is 1.
+ * @returns {string} The repeated string.
+ */
+
+export const repeatString = (text = '', repetitions = 1) => {
   let repeatedText = '';
   for (let count = 0; count < repetitions; count++) {
     repeatedText += text;
@@ -23,6 +31,9 @@ const repeatString = (text = '', repetitions = 1) => {
   return repeatedText;
 };
 
-for (let count = 0; count <= repetitions; count++) { // distractor
-for (let count = 0; count !>= repetitions; count++) { // distractor
-for (const count = 0; count < repetitions; count++) { // distractor
+
+/*
+for (let count = 0; count <= repetitions; count++) { // distraction
+for (let count = 0; count !>= repetitions; count++) { // distraction
+for (const count = 0; count < repetitions; count++) { // distraction
+*/
